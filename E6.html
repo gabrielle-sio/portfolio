@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>E6 — Projets — KEMGANG POULAH</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="veille.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">KP</div>
+        <div class="title">KEMGANG POULAH</div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="accueil.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="formation.html">Formation</a></li>
+          <li><a href="projects.html">Projets</a></li>
+          <li><a href="skills.html">Compétences</a></li>
+          <li><a href="E6.html" class="active">E6</a></li>
+          <li><a href="veille.html">Veille technologique</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="grid-2 container">
+        <div class="card">
+          <h2><p class="form-note">Présentation synthétique de deux projets évalués.</p></h2>
+
+          <article style="margin-top:14px;">
+            <h3>Projet 1 — Contrôleur de domaine et intégration (travail individuel)</h3>
+            <p>
+              Installation d’un serveur Windows Server (contrôleur de domaine) avec services essentiels (DNS, DHCP, AD DS). 
+              Promotion du serveur en contrôleur de domaine, création d’unités d’organisation et de comptes utilisateurs.
+            </p>
+            <p>
+              Intégration d’un second serveur dans le domaine du contrôleur principal, configuration des services partagés,
+              puis création et ajout d’un poste client au domaine pour valider l’authentification centralisée et les GPO simples.
+            </p>
+            <ul>
+              <li>Rôle : administration système, configuration AD et services réseau.</li>
+              <li>Technologies : Windows Server 2022, Active Directory, DNS, DHCP, virtualisation (proxmox).</li>
+            </ul>
+
+            <p>
+              <a class="btn" href="documents/projet1.pdf" target="_blank" rel="noopener">Mode opératoire — Projet 1 (PDF)</a>
+            </p>
+          </article>
+
+          <article style="margin-top:12px;">
+            <h3>Projet 2 — Mise en place de GLPI (projet de groupe)</h3>
+            <p>
+              Installation et configuration d’un serveur GLPI pour la gestion de parc matériel et des tickets.
+              Travail en groupe : Configuration LDAP et activation des inventaires - Déploiement des agents GLPI par GPO.
+            </p>
+            <p>
+              Configuration de l'authentification LDAP/Active Directory, 
+              Synchronisation des utilisateurs et groupes AD,
+              Déploiement des agents GLPI sur les serveurs et les postes de travail via GPO,
+              Vérification de la bonne remontée des inventaires dans la console GLPI.
+            </p>
+            <ul>
+              <li>Rôle : déploiement serveur, intégration GLPI, tests d’inventaire et documentation en équipe.</li>
+              <li>Technologies : Linux (Debian), GLPI, Active Directory.</li>
+            </ul>
+
+            <p>
+              <a class="btn" href="documents/projet2.pdf" target="_blank" rel="noopener">Mode opératoire — Projet 2 (PDF)</a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p style="color:var(--muted);margin:0;">&copy; 2026 - KEMGANG POULAH</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

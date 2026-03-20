@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Veille Technologique — KEMGANG</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="veille.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="brand"><div class="logo">KP</div><div class="title">KEMGANG POULAH</div></div>
+      <nav>
+        <ul>
+          <li><a href="accueil.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="formation.html">Formation</a></li>
+          <li><a href="projects.html">Projets</a></li>
+          <li><a href="skills.html">Compétences</a></li>
+          <li><a href="E6.html">E6</a></li>
+          <li><a href="veille.html" class="active">Veille technologique</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="grid-2 container">
+        <div class="card">
+          <h2>Thème : Cybersécurité industrielle</h2>
+          <h3>Sujet : La cybersécurité des automates programmables (PLC) dans l’industrie</h3>
+          <p class="form-note">
+            Un PLC (Programmable Logic Controller), appelé en français Automate Programmable Industriel (API), est un ordinateur industriel spécialisé conçu pour contrôler, automatiser et superviser des processus industriels en temps réel. Les PLC sont largement utilisés dans divers secteurs industriels tels que la fabrication, l'énergie, les transports et les infrastructures pour gérer des opérations critiques. Leur rôle principal est de surveiller les entrées provenant de capteurs et d'autres dispositifs, de traiter ces données selon des programmes préétablis, puis de contrôler les sorties vers des actionneurs, des moteurs, des vannes, etc.
+          </p>
+
+          <div class="timeline" style="margin-top:16px;">
+            <div class="timeline-item">
+              <strong>Septembre 2025 — Introduction aux systèmes industriels (PLC)</strong>
+              <p class="form-note">Découverte du rôle des automates programmables industriels dans les usines.
+Compréhension de leur fonctionnement de base, de leur architecture et de leur importance dans les processus industriels.</p>
+            </div>
+            <div class="timeline-item">
+              <strong>Octobre 2025 — Vulnérabilités des systèmes industriels</strong>
+              <p class="form-note">Étude des principales failles de sécurité des PLC : Connexions réseau non sécurisées ; Mots de passe par défaut ; Manque de mises à jour ; Analyse de cas réels d’attaques industrielles.</p>
+            </div>
+            <div class="timeline-item">
+              <strong>Novembre 2025 — Sécurisation des réseaux industriels (IT / OT)</strong>
+              <p class="form-note">Veille sur les bonnes pratiques de protection des réseaux industriels : Segmentation IT / OT ; Pare-feux industriels ; Surveillance des communications entre PLC et SCADA</p>
+            </div>
+          </div>
+
+          <p style="margin-top:18px;"><a href="documents/veille.pdf" target="_blank" class="btn">Télécharger la veille (PDF)</a></p>
+        </div>
+
+        <aside class="card">
+          <h3>Sources et références</h3>
+          <ul style="color:var(--muted);margin:0;padding-left:18px;">
+            <li>ANSSI – Cybersécurité des systèmes industriels, 2024</li>
+            <li>IEC 62443 – Industrial Network and System Security</li>
+            <li>Siemens – Industrial Security White Paper, 2025</li>
+            <li>NIST SP 800-82 – Guide to Industrial Control Systems (ICS) Security</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 - KEMGANG POULAH</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

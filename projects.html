@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projets & Réalisations — KEMGANG</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="veille.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">KP</div>
+        <div class="title">KEMGANG POULAH</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="accueil.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="formation.html">Formation</a></li>
+          <li><a href="projects.html" class="active">Projets</a></li>
+          <li><a href="skills.html">Compétences</a></li>
+          <li><a href="E6.html">E6</a></li>
+          <li><a href="veille.html">Veille technologique</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="grid-2 container">
+        <div class="card">
+          <h2>Mes réalisations et Projets</h2>
+
+          <article>
+            <h3>1- Configuration VoIP</h3>
+            <p>
+              Projet réalisé dans le cadre du BTS SIO SISR.  
+              Configuration d'un système VoIP incluant des équipements Cisco pour la téléphonie IP.
+            </p>
+
+            <ul>
+              <li>Configuration de 2 routeurs Cisco 811</li>
+              <li>Configuration d'un switch Cisco 2960</li>
+              <li>Configuration de 3 téléphones IP Cisco 7960</li>
+              <li>Intégration de 2 téléphones analogiques</li>
+            </ul>
+
+            <p><strong>Compétences :</strong> Réseaux Cisco, VoIP, téléphonie IP, configuration équipements réseau.</p>
+
+            <p><a class="btn" href="documents/projet-voip.pdf" target="_blank">Voir le rapport complet</a></p>
+          </article>
+          <article>
+           <h3>2- Installation de GLPI</h3> 
+              <p>
+                  GLPI (Gestionnaire Libre de Parc Informatique) est une application open source 
+                  de gestion des services informatiques (ITSM) et de gestion de parc informatique (ITAM).
+                </p>
+                <p>
+                  Dans ce projet, j’ai installé et configuré GLPI sur un serveur Linux (Debian), 
+                  en utilisant une pile LAMP (Linux, Apache, MySQL, PHP). 
+                  J’ai également configuré l’agent FusionInventory pour l’inventaire automatique des équipements.
+                </p>
+    
+                <p><strong>Compétences :</strong> Linux, Apache, MySQL, PHP, GLPI, FusionInventory.</p>
+    
+                <p><a class="btn" href="documents/projet-glpi.pdf" target="_blank">Voir le rapport complet</a></p>
+          </article>
+          <article>
+            <h3>3- Installation de pfSense</h3>
+            <p>
+              <strong>pfSense</strong> est une distribution open source basée sur FreeBSD utilisée comme 
+              <strong>pare-feu</strong> (firewall) et <strong>routeur</strong>. 
+              Elle offre des fonctionnalités avancées de sécurité réseau, de routage et de connectivité.
+            </p>
+
+            <p>
+              Dans ce projet, j’ai installé et configuré pfSense pour implémenter :
+            </p>
+            <ul>
+              <li>Rédondance réseau (failover et load balancing)</li>
+              <li>Filtrage de paquets et règles de sécurité</li>
+              <li>Traduction d'adresses réseau (NAT)</li>
+              <li>Configuration de VPN pour connexions sécurisées</li>
+            </ul>
+
+            <p>
+              Ce projet m’a permis de maîtriser les concepts de sécurité réseau, 
+              de configuration avancée de pare-feu et de gestion des connexions VPN.
+            </p>
+
+            <p><a class="btn" href="documents/projet-pfsense.pdf" target="_blank">Voir le rapport complet</a></p>
+          </article>
+
+          <article>
+            <h3>4- Installation et configuration de Nagios</h3>
+            <p>
+              <strong>Nagios</strong> est une solution de supervision open source permettant de
+              surveiller l'état des services réseau, des hôtes et des ressources système.
+            </p>
+
+            <p>
+              Dans ce projet, j’ai installé et configuré <strong>Nagios Core</strong> sur Ubuntu,
+              créé des checks pour HTTP, SSH, ping et l'espace disque, et mis en place des
+              notifications par e‑mail.
+            </p>
+
+            <p><strong>Compétences :</strong> Linux (Ubuntu), supervision, Nagios Core, configuration de checks, alerting.</p>
+
+            <p><a class="btn" href="documents/projet-nagios.pdf" target="_blank">Voir le rapport complet</a></p>
+          </article>
+
+          <article>
+            <h3>5- Installation d'OPENMaint</h3>
+            <p>
+              <strong>OPENMaint</strong> est une solution de gestion de la maintenance (GMAO)
+              permettant de gérer équipements, interventions et plans de maintenance.
+            </p>
+
+            <p>
+              J’ai installé OPENMaint sur Ubuntu, configuré la base de données, importé des
+              jeux de données et paramétré des workflows de maintenance pour un parc de test.
+            </p>
+
+            <p><strong>Compétences :</strong> Linux (Ubuntu), bases de données, OpenMaint, administration applicative.</p>
+
+            <p><a class="btn" href="documents/projet-openmaint.pdf" target="_blank">Voir le rapport complet</a></p>
+          </article>
+          </article>
+        </div>
+
+       
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p style="color:var(--muted);margin:0;">&copy; 2026 - KEMGANG POULAH</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

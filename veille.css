@@ -1,0 +1,155 @@
+/* Styles veille + ajustements pour projects (texte blanc sauf titres, liens PDF mis en évidence) */
+
+:root{
+  --accent-1:#ffd166;
+  --accent-2:#ff7b6b;
+  --muted-page:#f7edd6;
+  --text-plain:#ffffff;
+  --card-bg: rgba(255,255,255,0.012);
+}
+
+/* override timeline */
+.timeline{
+  border-left-color: rgba(255,209,102,0.12);
+}
+.timeline-item{
+  background: linear-gradient(90deg, rgba(255,255,255,0.012), transparent);
+  padding:12px;
+  border-radius:8px;
+}
+.timeline-item strong{ color:var(--accent-2); }
+.timeline-item p{
+  color:var(--text-plain);
+  margin:6px 0 0;
+  font-size:14px;
+}
+
+/* Styles appliqués aussi aux pages "projects" pour rendre le rendu proche de veille */
+.card article{
+  background: linear-gradient(90deg, rgba(255,255,255,0.01), transparent);
+  border-radius:10px;
+  padding:14px 16px;
+  margin-bottom:14px;
+  border:1px solid rgba(255,255,255,0.02);
+  transition:box-shadow 300ms ease, transform 300ms ease;
+}
+.card article:hover{
+  box-shadow:0 16px 36px rgba(2,6,23,0.45);
+  transform:translateY(-4px);
+}
+
+/* TITRES conservent l'accent color */
+.card article h3{
+  margin:0 0 8px;
+  color:var(--accent-2);
+  font-size:18px;
+}
+
+/* Texte = BLANC pour meilleure lisibilité */
+.card article p,
+.card article ul,
+.card article li,
+.card article .form-note{
+  color:var(--text-plain);
+  margin:0 0 8px;
+  line-height:1.45;
+}
+
+/* listes */
+.card article ul{ padding-left:18px }
+
+/* Liens standards dans les articles : accentés et lisibles */
+.card article a{
+  color:var(--accent-1);
+  text-decoration:underline;
+  font-weight:700;
+}
+
+/* Liens vers PDF / documents : bouton visible, ouverture en nouvelle fenêtre attendue */
+.card article a[href$=".pdf"],
+.card article a[href*="/documents/"]{
+  display:inline-block;
+  margin-top:8px;
+  padding:8px 12px;
+  border-radius:10px;
+  background: linear-gradient(90deg,var(--accent-1),var(--accent-2));
+  color:#071018;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 10px 30px rgba(0,0,0,0.28);
+  transition:transform 220ms ease, box-shadow 220ms ease, opacity 220ms ease;
+}
+.card article a[href$=".pdf"]:hover,
+.card article a[href*="/documents/"]:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 44px rgba(2,6,23,0.45);
+  opacity:0.98;
+}
+
+/* Aside / filters to match veille look */
+.card aside, .card .filters, .card .form-note{
+  color:var(--text-plain);
+}
+
+/* Styles spécifiques pour skills.html — texte blanc sauf titres, barres et badges propres */
+:root{
+  --skills-accent-1: var(--accent-1);
+  --skills-accent-2: var(--accent-2);
+  --skills-text: var(--text-plain);
+  --skills-muted: rgba(255,255,255,0.85);
+}
+
+/* S'assurer que les titres conservent l'accent */
+.card h2, .card h3 { color: var(--skills-accent-2); }
+
+/* Texte principal blanc pour meilleure lisibilité (listes, paragraphes) */
+.card, .card p, .card ul, .card li, .card .form-note {
+  color: var(--skills-text);
+}
+
+/* Badges de compétences (si présents) */
+.skills { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+.badge {
+  padding:8px 12px;
+  border-radius:999px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), transparent);
+  color: var(--skills-text);
+  font-weight:700;
+  font-size:14px;
+  border:1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* Lignes de compétences avec barre */
+.skill-row{ display:flex; align-items:center; gap:14px; margin:10px 0; }
+.skill-name{ width:160px; color:var(--skills-text); font-weight:700; }
+.skill-bar{ flex:1; height:12px; background:rgba(255,255,255,0.03); border-radius:8px; overflow:hidden; }
+.skill-fill{
+  height:100%;
+  width:60%; /* ajuster en HTML inline style si besoin */
+  background: linear-gradient(90deg, var(--skills-accent-1), var(--skills-accent-2));
+  border-radius:8px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  transition: width 520ms cubic-bezier(.2,.9,.2,1);
+}
+
+/* Rendre les liens PDF / docs visibles (boutons) si présents dans skills */
+.card a[href$=".pdf"], .card a[href*="/documents/"]{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 12px;
+  border-radius:10px;
+  background: linear-gradient(90deg, var(--skills-accent-1), var(--skills-accent-2));
+  color:#071018;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 12px 30px rgba(0,0,0,0.32);
+}
+
+/* Petite amélioration responsive */
+@media (max-width:980px){
+  .card article{ padding:12px }
+  .card article h3{ font-size:16px }
+  .skill-name{ width:120px; font-size:14px }
+  .badge{ font-size:13px; padding:7px 10px }
+}

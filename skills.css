@@ -1,0 +1,18 @@
+:root{
+  --accent-1: #ffb86b;
+  --accent-2: #5be3a7;
+  --muted-page: #f0e6d8;
+}
+
+/* override pour Compétences */
+.badge{
+  background: linear-gradient(90deg, rgba(255,184,107,0.12), rgba(91,227,167,0.06));
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* skill bars */
+.skill-row{display:flex;align-items:center;gap:12px;margin:10px 0}
+.skill-name{width:140px;color:var(--muted);font-weight:700}
+.skill-bar{flex:1;height:12px;background:rgba(255,255,255,0.03);border-radius:8px;overflow:hidden}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));border-radius:8px}
