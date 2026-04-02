@@ -42,6 +42,55 @@
       transform: scale(1.02);
     }
 
+    #certification-ebios {
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    #certification-ebios:hover {
+      transform: translateY(-4px) scale(1.01);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 16px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    #certification-ebios h3 {
+      color: var(--accent-2);
+    }
+
+    #certification-ebios .cert-logo {
+      width: 110px;
+      min-width: 90px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    #certification-ebios .cert-data p {
+      margin: 4px 0;
+      line-height: 1.45;
+    }
+
+    #certification-ebios .cert-data .cert-title {
+      font-weight: 700;
+      color: var(--accent-1);
+      margin-bottom: 4px;
+    }
+
+    #certification-ebios .cert-status {
+      display: inline-block;
+      background: rgba(0, 161, 133, 0.14);
+      color: #00a185;
+      border: 1px solid #00a185;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
     @keyframes shimmer {
       0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
       100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
@@ -146,6 +195,20 @@
                 <div class="skill-fill" style="width: 90%"></div>
               </div>
               <span style="color: var(--accent-2); font-weight: 600; min-width: 40px;">90%</span>
+            </div>
+          </div>
+
+          <div style="margin: 30px 0;" class="section-card fade-in-up" id="certification-ebios">
+            <h3 style="color: var(--accent-1); margin-bottom: 20px;">Certification</h3>
+            <div style="display: flex; align-items: center; gap: 16px; justify-content: flex-start; flex-wrap: wrap; background: rgba(0,0,0,0.05); border: 1px solid rgba(255,255,255,0.15); padding: 16px; border-radius: 12px;">
+              <img src="images/logo.png" alt="Logo MOOC EBIOS Risk Manager" style="width: 140px; height: auto; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); object-fit: contain;" />
+              <div style="flex: 1; min-width: 220px;">
+                <p style="margin: 0 0 8px; font-weight: 700; color: var(--accent-1);">MOOC EBIOS Risk Manager</p>
+                <p style="margin: 0 0 8px; color: var(--muted);">Certification EBIOS Risk Manager – “Introduction à la méthode EBIOS Risk Manager”.</p>
+                <p style="margin: 0 0 8px; color: var(--muted); line-height: 1.45;">Formation sur l’analyse et la gestion des risques pour la cybersécurité (EBIOS). Acquisition de compétences sur la cartographie des risques, le traitement des menaces et la gouvernance de la sécurité.</p>
+                <span class="cert-status">Certifié</span>
+                <p style="margin: 10px 0 0;"><a class="btn btn-animated" href="documents/certification-ebios-risk-manager.pdf" target="_blank">Voir l’attestation</a></p>
+              </div>
             </div>
           </div>
 
