@@ -7,8 +7,50 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="veille.css">
   <link rel="stylesheet" href="/portfolio/css/style.css">
+  <style>
+    .e6-article {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .e6-article::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      opacity: 0;
+    }
+
+    .e6-article:hover::before {
+      opacity: 1;
+      animation: shimmer 1.5s ease-in-out;
+    }
+
+    .e6-article:hover {
+      transform: translateY(-6px) scale(1.01);
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)) !important;
+      border-color: rgba(70,208,201,0.3) !important;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+
+    .e6-article:hover h3 {
+      color: var(--accent-2) !important;
+      transform: scale(1.02);
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+  </style>
 </head>
-<body>
+<body class="secondary">
   <header>
     <div class="container header-inner">
       <div class="brand">
@@ -36,18 +78,21 @@
   <main class="main">
     <section class="hero">
       <div class="grid-2 container">
-        <div class="card">
+        <div class="card card-hover fade-in-up">
           <h2><p class="form-note">Présentation synthétique de deux projets évalués.</p></h2>
 
-          <article style="margin-top:14px;">
+          <article style="margin-top:14px;" class="section-card fade-in-up e6-article">
             <h3>Projet 1 — Contrôleur de domaine et intégration (travail individuel)</h3>
             <p>
               Installation d’un serveur Windows Server (contrôleur de domaine) avec services essentiels (DNS, DHCP, AD DS). 
               Promotion du serveur en contrôleur de domaine, création d’unités d’organisation et de comptes utilisateurs.
             </p>
+            <p> 
+              Création des stratégies de groupe (GPO) déploiement de l'agent GLPI, gestion de comptes et de mots de passe utilisateurs.
+            </p>
             <p>
               Intégration d’un second serveur dans le domaine du contrôleur principal, configuration des services partagés,
-              puis création et ajout d’un poste client au domaine pour valider l’authentification centralisée et les GPO simples.
+              puis création et ajout d’un poste client au domaine pour valider l’authentification centralisée et les GPO.
             </p>
             <ul>
               <li>Rôle : administration système, configuration AD et services réseau.</li>
@@ -55,11 +100,11 @@
             </ul>
 
             <p>
-              <a class="btn" href="documents/projet1.pdf" target="_blank" rel="noopener">Mode opératoire — Projet 1 (PDF)</a>
+              <a class="btn btn-animated" href="documents/projet1.pdf" target="_blank" rel="noopener">Mode opératoire — Projet 1</a>
             </p>
           </article>
 
-          <article style="margin-top:12px;">
+          <article style="margin-top:12px;" class="section-card fade-in-up e6-article">
             <h3>Projet 2 — Mise en place de GLPI (projet de groupe)</h3>
             <p>
               Installation et configuration d’un serveur GLPI pour la gestion de parc matériel et des tickets.
@@ -73,11 +118,11 @@
             </p>
             <ul>
               <li>Rôle : déploiement serveur, intégration GLPI, tests d’inventaire et documentation en équipe.</li>
-              <li>Technologies : Linux (Debian), GLPI, Active Directory.</li>
+              <li>Technologies : Linux (Debian 13), GLPI, Active Directory.</li>
             </ul>
 
             <p>
-              <a class="btn" href="documents/projet2.pdf" target="_blank" rel="noopener">Mode opératoire — Projet 2 (PDF)</a>
+              <a class="btn btn-animated" href="documents/projet2.pdf" target="_blank" rel="noopener">Mode opératoire — Projet 2</a>
             </p>
           </article>
         </div>

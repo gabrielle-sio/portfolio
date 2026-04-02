@@ -14,5 +14,5 @@
 /* skill bars */
 .skill-row{display:flex;align-items:center;gap:12px;margin:10px 0}
 .skill-name{width:140px;color:var(--muted);font-weight:700}
-.skill-bar{flex:1;height:12px;background:rgba(255,255,255,0.03);border-radius:8px;overflow:hidden}
-.skill-fill{height:100%;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));border-radius:8px}
+.skill-bar{flex:1;height:12px;background:rgba(200,220,240,0.35);border-radius:8px;overflow:hidden}
+.skill-fill{height:100%;background:linear-gradient(90deg,rgba(102, 171, 229, 0.7),rgba(156, 220, 189, 0.7));border-radius:8px}

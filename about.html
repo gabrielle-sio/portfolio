@@ -5,8 +5,60 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>À propos — KEMGANG POULAH</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .about-aside {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .about-aside:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06)) !important;
+      border-color: rgba(255,107,95,0.4) !important;
+    }
+
+    .about-aside:hover h3 {
+      color: var(--accent-2) !important;
+      transform: scale(1.05);
+    }
+
+    .about-section {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      opacity: 0;
+    }
+
+    .about-section:hover::before {
+      opacity: 1;
+      animation: shimmer 1.5s ease-in-out;
+    }
+
+    .about-section:hover {
+      transform: translateY(-4px) scale(1.01);
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)) !important;
+      border-color: rgba(70,208,201,0.3) !important;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+  </style>
 </head>
-<body>
+<body class="secondary">
   <header>
     <div class="container">
       <div class="brand">
@@ -33,9 +85,9 @@
   <main>
     <section class="hero" style="padding-top:36px;">
       <div class="container hero-grid">
-        <article class="card" style="padding:28px;">
+        <article class="card card-hover fade-in-up" style="padding:28px;">
           <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;">
-            <img class="profile" src="images/ma-photo.jpg" alt="KEMGANG POULAH Gabrielle Aimée" style="width:140px;height:140px;">
+            <img class="profile icon-animated" src="images/ma-photo.jpg" alt="KEMGANG POULAH Gabrielle Aimée" style="width:140px;height:140px;">
             <div>
               <h1 style="margin:0 0 6px;">KEMGANG POULAH Gabrielle Aimée</h1>
               <p class="subtitle" style="margin:0 0 6px;">Étudiante — BTS SIO (option SISR)</p>
@@ -45,14 +97,14 @@
 
           <hr style="margin:20px 0;border:none;border-top:1px solid rgba(255,255,255,0.04)">
 
-          <section>
+          <section class="section-card fade-in-up about-section">
             <h2 style="margin:0 0 8px;">Présentation</h2>
             <p style="color:var(--muted);margin:0;">
               Actuellement étudiante en BTS Services Informatiques aux Organisations (option SISR). Je suis passionnée par les réseaux, la cybersécurité et le développement web. J'aime travailler sur des projets concrets et apprendre de nouvelles technologies en équipe.
             </p>
           </section>
 
-          <section style="margin-top:18px;">
+          <section style="margin-top:18px;" class="section-card fade-in-up about-section">
             <h3 style="margin:0 0 8px;">Formation</h3>
             <ul style="margin:0;padding-left:20px;color:var(--muted);">
               <li>BTS SIO (SISR) — En cours</li>
@@ -60,25 +112,32 @@
             </ul>
           </section>
 
-          <section style="margin-top:18px;">
+          <section style="margin-top:18px;" class="section-card fade-in-up about-section">
+            <h3 style="margin:0 0 8px;">Projet professionnel</h3>
+            <p style="color:var(--muted);margin:0;">Mon objectif professionnel est de travailler dans le domaine de la cybersécurité.
+J’aimerais me spécialiser dans la protection des systèmes et des réseaux informatiques, car aujourd’hui les entreprises 
+sont de plus en plus exposées aux cyberattaques..</p>
+          </section>
+
+          <section style="margin-top:18px;" class="section-card fade-in-up about-section">
             <h3 style="margin:0 0 8px;">Compétences</h3>
             <p style="color:var(--muted);margin:0;">
-              HTML, CSS, administration Linux, notions de sécurité réseau.
+              HTML, CSS, administration Windows/Linux, notions de sécurité réseau.
             </p>
           </section>
 
           <div style="margin-top:18px;">
-            <a class="btn" href="projects.html">Voir mes projets</a>
-            <a class="btn ghost" href="contact.html">Me contacter</a>
+            <a class="btn btn-animated fade-in-up" href="projects.html">Voir mes projets</a>
+            <a class="btn ghost btn-animated fade-in-up" href="contact.html">Me contacter</a>
           </div>
         </article>
 
-        <aside class="hero-info card">
+        <aside class="hero-info card about-aside card-hover fade-in-up">
           <h3 style="margin-top:0;">Infos rapides</h3>
           <ul class="quick">
             <li><strong>Localisation</strong><span>Saint-Cloud</span></li>
             <li><strong>Disponibilité</strong><span>Alternance / Stage</span></li>
-            <li><strong>Langues</strong><span>Français (natif) • Anglais (notions)</span></li>
+            <li><strong>Langues:</strong><span><br> • Français (langue maternelle) <p>• Anglais (notions) </p></span></li>
           </ul>
         </aside>
       </div>

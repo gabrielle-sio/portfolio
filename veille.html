@@ -7,8 +7,30 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="veille.css">
   <link rel="stylesheet" href="/portfolio/css/style.css">
+  <style>
+    .veille-aside {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .veille-aside:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06)) !important;
+      border-color: rgba(255,107,95,0.4) !important;
+    }
+
+    .veille-aside:hover h3 {
+      color: var(--accent-2) !important;
+      transform: scale(1.05);
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+  </style>
 </head>
-<body>
+<body class="secondary">
   <header>
     <div class="container header-inner">
       <div class="brand"><div class="logo">KP</div><div class="title">KEMGANG POULAH</div></div>
@@ -31,7 +53,7 @@
   <main class="main">
     <section class="hero">
       <div class="grid-2 container">
-        <div class="card">
+        <div class="card card-hover fade-in-up">
           <h2>Thème : Cybersécurité industrielle</h2>
           <h3>Sujet : La cybersécurité des automates programmables (PLC) dans l’industrie</h3>
           <p class="form-note">
@@ -54,10 +76,10 @@ Compréhension de leur fonctionnement de base, de leur architecture et de leur i
             </div>
           </div>
 
-          <p style="margin-top:18px;"><a href="documents/veille.pdf" target="_blank" class="btn">Télécharger la veille (PDF)</a></p>
+          <p style="margin-top:18px;"><a href="documents/veille.pdf" target="_blank" class="btn btn-animated">Rapport de veille</a></p>
         </div>
 
-        <aside class="card">
+        <aside class="card card-hover fade-in-up veille-aside">
           <h3>Sources et références</h3>
           <ul style="color:var(--muted);margin:0;padding-left:18px;">
             <li>ANSSI – Cybersécurité des systèmes industriels, 2024</li>

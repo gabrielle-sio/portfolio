@@ -7,6 +7,58 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="veille.css">
     <link rel="stylesheet" href="/portfolio/css/style.css">
+  <style>
+    .formation-section {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .formation-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      opacity: 0;
+    }
+
+    .formation-section:hover::before {
+      opacity: 1;
+      animation: shimmer 1.5s ease-in-out;
+    }
+
+    .formation-section:hover {
+      transform: translateY(-4px) scale(1.01);
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)) !important;
+      border-color: rgba(70,208,201,0.3) !important;
+    }
+
+    .formation-option {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .formation-option:hover {
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06)) !important;
+      border-color: rgba(255,107,95,0.4) !important;
+    }
+
+    .formation-option:hover h3 {
+      color: var(--accent-2) !important;
+      transform: scale(1.05);
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -35,12 +87,12 @@
   <main class="main">
     <section class="hero">
       <div class="grid-2 container">
-        <div class="card">
+        <div class="card card-hover fade-in-up">
           <main class="bts-sio">
 
             <!-- Introduction -->
-            <section class="intro">
-                <h1>BTS SIO – Services Informatiques aux Organisations</h1>
+            <section class="intro section-card fade-in-up">
+                <h1 style="color: var(--accent-2); font-weight: 600;">BTS SIO – Services Informatiques aux Organisations</h1>
                 <p>
                     Le <strong>BTS SIO (Services Informatiques aux Organisations)</strong> est un diplôme national de niveau <strong>Bac +2</strong>
                     reconnu par l’État. Il forme des professionnels capables de concevoir, déployer, administrer et maintenir
@@ -49,7 +101,7 @@
             </section>
 
             <!-- Présentation générale -->
-            <section class="presentation">
+            <section class="presentation section-card fade-in-up formation-section">
                 <h2>Présentation générale du BTS SIO</h2>
                 <p>
                     Le BTS SIO répond aux besoins croissants des entreprises en matière de transformation numérique,
@@ -62,7 +114,7 @@
             </section>
 
             <!-- Objectifs -->
-            <section class="objectifs">
+            <section class="objectifs section-card fade-in-up formation-section">
                 <h2>Objectifs de la formation</h2>
                 <ul>
                     <li>Acquérir une solide culture informatique</li>
@@ -74,7 +126,7 @@
             </section>
 
             <!-- Organisation -->
-            <section class="organisation">
+            <section class="organisation section-card fade-in-up formation-section">
                 <h2>Organisation de la formation</h2>
                 <p>
                     Le BTS SIO se déroule sur une durée de <strong>2 ans</strong> et il est possible de suivre cette formation en apprentissage (en alternance).Elle comprend des enseignements généraux,
@@ -91,10 +143,10 @@
             </section>
 
             <!-- Options -->
-            <section class="options">
+            <section class="options section-card fade-in-up formation-section">
                 <h2>Les options du BTS SIO</h2>
 
-                <article class="option sisr">
+                <article class="option sisr formation-option">
                     <h3>Option SISR – Solutions d’Infrastructure, Systèmes et Réseaux</h3>
                     <p>
                         L’option SISR forme des spécialistes de l’administration, de l’exploitation et de la sécurisation
@@ -109,7 +161,7 @@
                     </ul>
                 </article>
 
-                <article class="option slam">
+                <article class="option slam formation-option">
                     <h3>Option SLAM – Solutions Logicielles et Applications Métiers</h3>
                     <p>
                         L’option SLAM est orientée vers le développement d’applications et de solutions logicielles
@@ -125,7 +177,7 @@
             </section>
 
             <!-- Mon option -->
-            <section class="mon-option">
+            <section class="mon-option section-card fade-in-up formation-section">
                 <h2>Mon option : BTS SIO SISR</h2>
                 <p>
                     J’ai choisi l’option <strong>SISR</strong> car je suis particulièrement intéressée par
@@ -143,7 +195,7 @@
             </section>
 
             <!-- Projets -->
-            <section class="projets">
+            <section class="projets section-card fade-in-up formation-section">
                 <h2>Projets et mises en situation professionnelle</h2>
                 <p>
                     Le BTS SIO accorde une place importante aux projets permettant de travailler sur des cas concrets
@@ -153,7 +205,7 @@
             </section>
 
             <!-- Débouchés professionnels -->
-            <section class="debouches-pro">
+            <section class="debouches-pro section-card fade-in-up formation-section">
                 <h2>Débouchés professionnels</h2>
                 <ul>
                     <li>Technicien(ne) systèmes et réseaux</li>
@@ -165,7 +217,7 @@
             </section>
 
             <!-- Poursuites d'études -->
-            <section class="debouches-edu">
+            <section class="debouches-edu section-card fade-in-up formation-section">
                 <h2>Poursuite d’études</h2>
                 <p>
                       Le BTS SIO permet non seulement une insertion professionnelle, mais aussi une poursuite d’études
@@ -195,7 +247,7 @@
             </section>
 
             <!-- Conclusion -->
-            <section class="conclusion">
+            <section class="conclusion section-card fade-in-up formation-section">
                 <h2>Conclusion</h2>
                 <p>
                     Le BTS SIO est une formation complète et professionnalisante qui constitue une base solide

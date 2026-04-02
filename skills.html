@@ -6,8 +6,49 @@
   <title>Compétences — KEMGANG</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="veille.css">
+  <style>
+    .skills-section {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skills-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      opacity: 0;
+    }
+
+    .skills-section:hover::before {
+      opacity: 1;
+      animation: shimmer 1.5s ease-in-out;
+    }
+
+    .skills-section:hover {
+      transform: translateY(-4px) scale(1.01);
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)) !important;
+      border-color: rgba(70,208,201,0.3) !important;
+    }
+
+    .skills-section:hover h3 {
+      color: var(--accent-2) !important;
+      transform: scale(1.02);
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+  </style>
 </head>
-<body>
+<body class="secondary">
   <header>
     <div class="container header-inner">
       <div class="brand">
@@ -32,19 +73,85 @@
 
   <main class="main">
     <section class="hero">
-      <div class="grid-2 container">
-        <div class="card">
+      <div class="container">
+        <div class="card card-hover fade-in-up">
           <h2>Mes Compétences</h2>
-          <ul>
-            <li>Administration systèmes (Windows / Linux)</li>
-            <li>Réseaux (Cisco Packet Tracer, VLAN, routage)</li>
-            <li>Développement web (HTML, PHP, SQL)</li>
-            <li>Virtualisation (VMware, VirtualBox)</li>
-          </ul>
-          <p><a href="documents/competences.pdf" target="_blank">tableau de compétences complet</a>.</p>
+          
+          <div style="margin: 30px 0;" class="section-card fade-in-up">
+            <h3 style="color: var(--accent-1); margin-bottom: 20px;">Administration & Systèmes</h3>
+            <div class="skill-row">
+              <div class="skill-name">Windows</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 85%"></div>
+              </div>
+              <span style="color: var(--accent-2); font-weight: 600; min-width: 40px;">85%</span>
+            </div>
+            <div class="skill-row">
+              <div class="skill-name">Linux</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 75%"></div>
+              </div>
+              <span style="color: var(--accent-2); font-weight: 600; min-width: 40px;">75%</span>
+            </div>
+          </div>
+
+          <div style="margin: 30px 0;" class="section-card fade-in-up">
+            <h3 style="color: var(--accent-1); margin-bottom: 20px;">Réseaux</h3>
+            <div class="skill-row">
+              <div class="skill-name">Cisco Packet Tracer</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 70%"></div>
+              </div>
+              <span style="color: var(--accent-2); font-weight: 600; min-width: 40px;">70%</span>
+            </div>
+            <div class="skill-row">
+              <div class="skill-name">VLAN / Routage</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 70%"></div>
+              </div>
+              <span style="color: var(--accent-2); font-weight: 600; min-width: 40px;">70%</span>
+            </div>
+          </div>
+
+          <div style="margin: 30px 0;" class="section-card fade-in-up">
+            <h3 style="color: var(--accent-1); margin-bottom: 20px;">Développement Web</h3>
+            <div class="skill-row">
+              <div class="skill-name">HTML / CSS</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 60%"></div>
+              </div>
+              <span style="color: var(--accent-2); font-weight: 600; min-width: 40px;">60%</span>
+            </div>
+            <div class="skill-row">
+              <div class="skill-name">PHP</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 50%"></div>
+              </div>
+              <span style="color: var(--accent-2); font-weight: 600; min-width: 40px;">50%</span>
+            </div>
+            <div class="skill-row">
+              <div class="skill-name">SQL / Bases de données</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 50%"></div>
+              </div>
+              <span style="color: var(--accent-2); font-weight: 600; min-width: 40px;">50%</span>
+            </div>
+          </div>
+
+          <div style="margin: 30px 0;" class="section-card fade-in-up">
+            <h3 style="color: var(--accent-1); margin-bottom: 20px;">Virtualisation</h3>
+            <div class="skill-row">
+              <div class="skill-name">VMware </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 90%"></div>
+              </div>
+              <span style="color: var(--accent-2); font-weight: 600; min-width: 40px;">90%</span>
+            </div>
+          </div>
+
+          <p style="margin-top: 40px;"><a class="btn btn-animated" href="documents/competences.pdf" target="_blank">tableau de compétences complet</a></p>
         </div>
-
-
+      </div>
     </section>
   </main>
 
