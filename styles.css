@@ -429,27 +429,26 @@ footer{padding:22px 0;text-align:center;color:var(--muted);border-top:1px solid 
   overflow: hidden;
 }
 
-/* même shimmer que projets */
-.skills-section::before{
-  content:'';
-  position:absolute;
-  top:-50%;
-  left:-50%;
-  width:200%;
-  height:200%;
-  background:linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-  transform:rotate(45deg);
-  opacity:0;
-  transition:0.6s ease;
+/* EXACTEMENT même effet que projets */
+.skills-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 0.6s ease;
 }
 
-.skills-section:hover::before{
-  opacity:1;
+.skills-section:hover::before {
+  opacity: 1;
   animation: shimmer 1.5s ease-in-out;
 }
 
-/* ⭐ EXACTEMENT LE MÊME HOVER QUE PROJETS */
-.skills-section:hover{
+.skills-section:hover {
   transform: translateY(-6px) scale(1.01);
   background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)) !important;
   border-color: rgba(70,208,201,0.3) !important;
