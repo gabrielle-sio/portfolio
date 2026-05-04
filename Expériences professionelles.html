@@ -2,10 +2,10 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Expériences professionnelles</title>
-   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="/portfolio/css/style.css">
+
+<link rel="stylesheet" href="/portfolio/css/style.css">
 
 <style>
 :root{
@@ -14,7 +14,6 @@
   --muted: #cbd5e1;
 }
 
-/* BODY */
 body{
   margin:0;
   font-family: Arial, sans-serif;
@@ -22,44 +21,45 @@ body{
   color:white;
 }
 
-/* HEADER */
-header{
+/* TITRE PAGE */
+.page-title{
   text-align:center;
-  padding:30px;
-  font-size:28px;
-  font-weight:bold;
+  font-size:32px;
+  margin:40px 0;
 }
 
-/* CONTAINER */
+/* GRID */
 .container{
   width:90%;
   max-width:1100px;
   margin:auto;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap:20px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap:25px;
 }
 
 /* CARD */
 .experience{
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(6px);
-  border-radius:16px;
-  padding:20px;
-  margin-bottom:25px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  border-radius:18px;
+  padding:22px;
+  backdrop-filter: blur(8px);
+
   transition:0.3s;
+  border:1px solid rgba(255,255,255,0.08);
 }
 
 .experience:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
 }
 
 /* TITRE */
 .experience h2{
-  margin:0;
+  margin:0 0 10px;
+  font-size:20px;
+
   background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -68,31 +68,33 @@ header{
 /* DATE */
 .date{
   color: var(--muted);
-  margin-bottom:10px;
+  font-size:14px;
+  margin-bottom:15px;
 }
 
 /* LIST */
 ul{
-  padding-left:20px;
+  padding-left:18px;
+  margin:0;
 }
 
 li{
   margin-bottom:8px;
+  font-size:14px;
 }
 
-/* BADGE (comme ta page compétences) */
+/* BADGE */
 .badge{
   display:inline-block;
+  margin-top:15px;
   padding:6px 12px;
   border-radius:20px;
-  font-size:13px;
-  margin-top:10px;
-  background: linear-gradient(90deg, rgba(255,184,107,0.12), rgba(91,227,167,0.06));
-  color:#fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  font-size:12px;
+
+  background: linear-gradient(90deg, rgba(255,184,107,0.15), rgba(91,227,167,0.1));
 }
 
-/* BOUTON */
+/* RETOUR */
 .btn-retour{
   position:fixed;
   top:20px;
@@ -114,76 +116,57 @@ li{
 
 <body>
 
-<body class="secondary">
-  <header>
-    <div class="container header-inner">
-      <div class="brand">
-        <div class="logo">KP</div>
-        <div class="title">KEMGANG POULAH</div>
-      </div>
+<a href="index.html" class="btn-retour">← Retour</a>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="about.html">À propos</a></li>
-          <li><a href="formation.html">Formation</a></li>
-           <li><a href="Expériences professionelles.html">Expériences Pro</a></li>
-          <li><a href="projects.html">Projets</a></li>
-          <li><a href="skills.html">Compétences</a></li>
-          <li><a href="E6.html" class="active">E6</a></li>
-          <li><a href="veille.html">Veille technologique</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<h1 class="page-title">💼 Expériences professionnelles</h1>
 
-      <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
-    </div>
-  </header>
-<header>
 <div class="container">
 
+<!-- STAGE 1 -->
 <div class="experience">
-<h2><i class="fas fa-network-wired"></i> Stage technicienne systèmes & réseaux</h2>
-<div class="date">Janvier 2026 – Février 2026 | SBG LUTECE (France)</div>
+<h2>Stage technicienne systèmes & réseaux</h2>
+<div class="date">Janvier 2026 – Février 2026 | SBG LUTECE</div>
 
 <ul>
-<li>Gestion des accès utilisateurs avec Active Directory</li>
-<li>Diagnostic d’incidents réseau avec Wireshark et Nmap</li>
-<li>Application des bonnes pratiques de sécurité informatique</li>
-<li>Support technique dans un environnement professionnel</li>
+<li>Gestion des comptes utilisateurs (Active Directory)</li>
+<li>Analyse du trafic réseau (Wireshark, Nmap)</li>
+<li>Application des règles de sécurité informatique</li>
+<li>Support technique aux utilisateurs</li>
 </ul>
 
-<span class="badge">Active Directory • Sécurité • Support IT</span>
+<span class="badge">Active Directory • Réseau • Sécurité</span>
 </div>
 
-
+<!-- STAGE 2 -->
 <div class="experience">
-<h2><i class="fas fa-laptop"></i> Stage technicienne systèmes & réseaux</h2>
-<div class="date">Mai 2025 – Juillet 2025 | Réparateurs Mac & PC (Montreuil)</div>
+<h2>Stage technicienne informatique</h2>
+<div class="date">Mai 2025 – Juillet 2025 | Réparateurs Mac & PC</div>
 
 <ul>
-<li>Réalisation de plus de 30 interventions (réinstallation OS, suppression de malwares)</li>
-<li>Diagnostic et réparation de pannes matérielles</li>
-<li>Assistance et accompagnement des utilisateurs</li>
-<li>Formation des utilisateurs à la sécurité de leurs postes</li>
+<li>Réinstallation systèmes (Windows)</li>
+<li>Suppression de virus et malwares</li>
+<li>Réparation matérielle</li>
+<li>Assistance client</li>
 </ul>
 
-<span class="badge">Maintenance • Support • Sécurité</span>
+<span class="badge">Maintenance • Support • Hardware</span>
 </div>
 
-
+<!-- STAGE 3 -->
 <div class="experience">
-<h2><i class="fas fa-server"></i> Stage technicienne systèmes & réseaux</h2>
-<div class="date">Janvier 2024 – Septembre 2024 | ISNOV SARL (Cameroun)</div>
+<h2>Stage réseaux & systèmes</h2>
+<div class="date">Janvier 2024 – Septembre 2024 | ISNOV SARL</div>
 
 <ul>
-<li>Participation à la configuration de réseaux (DNS, DHCP, VLAN)</li>
-<li>Introduction à la sécurisation des systèmes Windows Server et Linux</li>
-<li>Découverte de la gestion des vulnérabilités et des risques informatiques</li>
-<li>Mise en place de principes de sécurité (filtrage, firewall)</li>
+<li>Configuration réseaux (DHCP, DNS, VLAN)</li>
+<li>Introduction à Linux & Windows Server</li>
+<li>Mise en place de règles de sécurité</li>
+<li>Découverte des vulnérabilités</li>
 </ul>
 
 <span class="badge">Réseaux • Linux • Sécurité</span>
+</div>
+
 </div>
 
 </body>
