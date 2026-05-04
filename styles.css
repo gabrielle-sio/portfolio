@@ -423,7 +423,59 @@ footer{padding:22px 0;text-align:center;color:var(--muted);border-top:1px solid 
   margin-bottom:6px;
   color:#e2e8f0;
 }
+/* EXPERIENCE CARD PROPRE */
+.skills-section{
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+}
 
+/* SUPPRIME L’EFFET QUI TOUCHE TOUT */
+.skills-section::before{
+  display:none !important;
+}
+
+/* HOVER PROPRE (INDIVIDUEL) */
+.skills-section:hover{
+  transform: translateY(-6px);
+  border-color: rgba(255,184,107,0.4);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* TITRES EXPÉRIENCES */
+.exp-title{
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* BADGES AMÉLIORÉS */
+.badge{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  margin-top:10px;
+
+  background: linear-gradient(90deg,
+    rgba(255,184,107,0.25),
+    rgba(91,227,167,0.25)
+  );
+
+  border: 1px solid rgba(255,184,107,0.3);
+  color:#fff;
+
+  transition:0.3s;
+}
+
+.badge:hover{
+  transform: scale(1.05);
+  background: linear-gradient(90deg,
+    rgba(255,184,107,0.4),
+    rgba(91,227,167,0.4)
+  );
+}
 /* Délais d'animation pour les éléments successifs */
 .fade-in-up:nth-child(1) { animation-delay: 0.1s; }
 .fade-in-up:nth-child(2) { animation-delay: 0.2s; }
