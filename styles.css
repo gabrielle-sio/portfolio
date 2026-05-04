@@ -423,23 +423,44 @@ footer{padding:22px 0;text-align:center;color:var(--muted);border-top:1px solid 
   margin-bottom:6px;
   color:#e2e8f0;
 }
-/* EXPERIENCE CARD PROPRE */
+/* === EXPERIENCE STYLE IDENTIQUE AUX PROJETS === */
 .skills-section{
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
+  overflow: hidden;
 }
 
-/* SUPPRIME L’EFFET QUI TOUCHE TOUT */
+/* effet shimmer identique projects */
 .skills-section::before{
-  display:none !important;
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
 }
 
-/* HOVER PROPRE (INDIVIDUEL) */
+.skills-section:hover::before{
+  opacity: 1;
+  animation: shimmer-global 1.5s ease-in-out;
+}
+
+/* hover identique project-article */
 .skills-section:hover{
-  transform: translateY(-6px);
-  border-color: rgba(255,184,107,0.4);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transform: translateY(-6px) scale(1.01);
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)) !important;
+  border-color: rgba(70,208,201,0.3) !important;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* titres identiques projets */
+.skills-section:hover .exp-title{
+  color: var(--accent-2);
+  transform: scale(1.02);
 }
 
 /* TITRES EXPÉRIENCES */
