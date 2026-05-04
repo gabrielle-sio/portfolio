@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Expériences professionnelles</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+:root{
+  --accent-1: #ffb86b;
+  --accent-2: #5be3a7;
+  --muted: #cbd5e1;
+}
+
+/* BODY */
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(145deg, #1e1e2f, #12121c);
+  color:white;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:30px;
+  font-size:28px;
+  font-weight:bold;
+}
+
+/* CONTAINER */
+.container{
+  width:90%;
+  max-width:1000px;
+  margin:auto;
+}
+
+/* CARD */
+.experience{
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(6px);
+  border-radius:16px;
+  padding:20px;
+  margin-bottom:25px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  transition:0.3s;
+}
+
+.experience:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+
+/* TITRE */
+.experience h2{
+  margin:0;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* DATE */
+.date{
+  color: var(--muted);
+  margin-bottom:10px;
+}
+
+/* LIST */
+ul{
+  padding-left:20px;
+}
+
+li{
+  margin-bottom:8px;
+}
+
+/* BADGE (comme ta page compétences) */
+.badge{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  margin-top:10px;
+  background: linear-gradient(90deg, rgba(255,184,107,0.12), rgba(91,227,167,0.06));
+  color:#fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* BOUTON */
+.btn-retour{
+  position:fixed;
+  top:20px;
+  left:20px;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  color:#12121c;
+  padding:10px 18px;
+  border-radius:20px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn-retour:hover{
+  transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.php" class="btn-retour">
+<i class="fas fa-arrow-left"></i> Retour
+</a>
+
+<header>
+<i class="fas fa-briefcase"></i> Expériences professionnelles
+</header>
+
+<div class="container">
+
+<div class="experience">
+<h2><i class="fas fa-laptop"></i> Stage – Support informatique</h2>
+<div class="date">2024</div>
+
+<ul>
+<li>Installation et configuration de postes informatiques</li>
+<li>Maintenance et dépannage matériel</li>
+<li>Assistance aux utilisateurs</li>
+<li>Installation de Windows</li>
+<li>Utilisation de VMware</li>
+</ul>
+
+<span class="badge">Support IT • Windows • VMware</span>
+</div>
+
+<div class="experience">
+<h2><i class="fas fa-code"></i> Projet – Site d’annonces</h2>
+<div class="date">2025</div>
+
+<ul>
+<li>Développement d’un site en PHP/MySQL</li>
+<li>Système d’inscription et connexion</li>
+<li>Gestion des annonces (CRUD)</li>
+<li>Ajout d’images</li>
+<li>Messagerie entre utilisateurs</li>
+</ul>
+
+<span class="badge">PHP • MySQL • Web</span>
+</div>
+
+<div class="experience">
+<h2><i class="fas fa-network-wired"></i> Compétences techniques</h2>
+
+<ul>
+<li>Simulation réseau (Cisco Packet Tracer)</li>
+<li>Machines virtuelles Linux / Windows</li>
+<li>Notions réseaux (IP, DHCP, DNS)</li>
+<li>Gestion base de données</li>
+</ul>
+
+<span class="badge">Réseaux • Virtualisation • DB</span>
+</div>
+
+</div>
+
+</body>
+</html>
