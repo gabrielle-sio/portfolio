@@ -33,8 +33,12 @@ header{
 /* CONTAINER */
 .container{
   width:90%;
-  max-width:1000px;
+  max-width:1100px;
   margin:auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap:20px;
 }
 
 /* CARD */
